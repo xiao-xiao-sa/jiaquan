@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "goods": "../../components/goods/goods",
+    "news":"../../components/news/news"
+  },
+  "navigationBarTitleText": "首页"
+}

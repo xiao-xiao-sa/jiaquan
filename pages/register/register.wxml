@@ -1,0 +1,21 @@
+<!--供应商注册页面-->
+<view wx:if='{{step==1}}'>
+  <view class='title'>欢迎注册**商城</view>
+  <form>
+    <view class='phone-input'><input bindinput='getPhone'  placeholder='请输入手机号'/></view>
+    <view class='code-input'>
+      <getCode phone="{{phone}}"  bind:myevent="onGetCode"></getCode>
+    </view>
+    <button class='submit-btn' bindtap='nextStep'>下一步</button>
+  </form>
+</view>
+<view wx:elif='{{step==2}}'>
+  <view class='title'>设置密码</view>
+  <form>
+    <view class='pwd-input'><input bindinput='getPwd'  placeholder='请输入密码（8`16位数字和字母的组合）'/></view>
+    <view class='pwd-input'>
+      <input bindinput='getaPwd' placeholder='请再次确认密码'></input>
+    </view>
+    <button class='submit-btn' bindtap='submit'>确认</button>
+  </form>
+</view>

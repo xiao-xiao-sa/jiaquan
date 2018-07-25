@@ -1,0 +1,10 @@
+<!--components/news/news.wxml-->
+<view class='news-container' >
+  <view class='news-left'>
+    <image src="{{src}}"/>
+  </view> 
+  <view class='news-right'>
+    <view class='news-title'>{{title}}</view>
+    <view class='news-time'>{{time}}</view>
+  </view>
+</view>

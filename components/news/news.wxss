@@ -1,0 +1,31 @@
+/* components/news/news.wxss */
+.news-container{
+  width:750rpx;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+  padding:20rpx 20rpx;
+  box-sizing: border-box;
+  border-bottom:1px solid #eeeeee;
+}
+.news-container .news-left{
+  margin-right:20rpx;
+  width:128rpx;
+  height: 138rpx;
+
+}
+.news-container .news-left image{
+  width:128rpx;
+  height: 138rpx;
+}
+.news-container .news-right{
+  position: relative;
+  height: 138rpx;
+}
+.news-container .news-time{
+  position: absolute;
+  bottom:0;
+  font-size: 24rpx;
+  color:#999999;
+}

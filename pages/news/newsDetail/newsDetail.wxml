@@ -1,0 +1,17 @@
+<!--新闻详情-->
+<view class='container'>
+	<view class='title'>
+		<view class='h1'>{{newsDetail.title}}</view>
+		<view class='h3'>
+			<text>{{newsDetail.time}}</text>
+			<text class='green'>{{newsDetail.form}}</text>
+		</view>
+	</view>
+  
+	<view class='content'>
+		<import src="/wxParse/wxParse.wxml"/>
+		<view class="wxParse">
+	        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view>
+	</view>
+</view>	

@@ -1,0 +1,135 @@
+/* pages/shopDetail/shopDetail.wxss */
+.swiper {  
+  width: 100%;  
+} 
+.shop-info{
+	background-color: #fff;
+	margin-bottom: 20rpx;
+}
+.shop-info .right{
+  background-color:transparent;
+  border:none;
+  outline: none; 
+}
+.shop-info .right::after{
+  border:none;
+}
+.info-01{
+	width:100%;
+	border-bottom: 1px solid #efefef;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding:20rpx;
+	box-sizing: border-box;
+}
+.info-01 .left{
+	width:600rpx;
+}
+.info-01 .left .title{
+	font-size: 32rpx;
+}
+.info-01 .left .price{
+	color:red;
+}
+.info-01 .right image{
+	width:45rpx;
+	height: 72rpx;
+}
+.info-02{
+	width:100%;
+	box-sizing: border-box;
+	padding:25rpx 20rpx;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	color:#666;
+	border-bottom: 1px solid #efefef
+}
+.info-03{
+	width:100%;
+	box-sizing: border-box;
+	padding:20rpx;
+}
+.info-03 text{
+	margin-right: 20rpx;
+	color:red;
+}
+.info-03 .kuang{
+	border:1px solid red;
+	border-radius: 10rpx;
+	padding:5rpx 8rpx;
+}
+.detail-title{
+	width:100%;
+	height: 84rpx;
+	line-height: 84rpx;
+	box-sizing: border-box;
+	padding-left: 20rpx;
+	background-color: #fff;
+	font-size: 30rpx;
+	color:#666;
+}
+.shop-detail{
+	margin-bottom: 100rpx;
+}
+.footer{
+	height: 100rpx;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	width:100%; 
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+}
+button{
+  border:none;
+  outline: none;
+  background-color: transparent;
+}
+button::after{
+  border: none;
+}
+.car,.kf{
+	width:100rpx;
+	height: 100%;
+	text-align: center;
+	color: #666;
+	box-sizing: border-box;
+	padding:10rpx 0; 
+  position: relative;
+}
+.car view,.kf view{
+	padding:0;
+	height:30rpx;
+	line-height: 30rpx;
+  position: absolute;
+  bottom:5rpx;
+  font-size:30rpx;
+  width:100%;
+  text-align: center;
+}
+.car image, .kf image{
+	width:40rpx;
+	height: 40rpx;
+  position: relative;
+  bottom:10rpx;
+}
+
+
+
+.footer .add-car,.footer .buy{
+	width:275rpx;
+	height: 100%;
+	text-align: center;
+	line-height: 100rpx;
+	background-color:#ff8855;
+	color: #fff;
+	font-size: 45rpx; 
+}
+.footer .buy{
+	background-color:#8cc447;
+}

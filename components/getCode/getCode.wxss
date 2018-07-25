@@ -1,0 +1,19 @@
+/* components/getCode/getCode.wxss */
+.listCode{
+  width: 638rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.getCode{
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #8cc447;
+  float: right;
+}
+.listCode input{
+  height: 100rpx;
+}

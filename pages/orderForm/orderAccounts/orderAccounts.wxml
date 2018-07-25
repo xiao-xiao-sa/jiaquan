@@ -1,0 +1,50 @@
+<!--订单结算页面-->
+ <!-- 收件人信息相同 -->
+<view class='user-info'>
+	<image src='../../../images/dizhi.png'/>
+  <navigator url='../../my/address/address'>
+    <view class='info-right'>
+      <view class='info-top'>
+        <text>收货人：{{orderInfo.name}}</text>
+        <text>{{orderInfo.phone}}</text>
+      </view>
+      <view class='info-bottom'>收货地址：{{orderInfo.address}}</view>
+    </view>
+  </navigator>
+</view>
+<!--商品信息  -->
+<view wx:for='{{orderInfo.shopList}}' class='order-list'>
+  <view class="order-middle" >
+	  	<image class="order-left" src="{{item.src}}"/>
+	  	<view class="order-center">{{item.title}}</view>
+	  	<view class="order-right">
+	  		<view class="price"><text>¥</text>{{item.price}}</view>
+	  		<view class="cart-count-box">
+          <text class="cart-count-down" bindtap="minusCount"  data-index="{{index}}">-</text>
+          <text class="cart-count-num">{{item.num}}</text>
+          <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
+        </view>
+	  	</view>
+	</view>
+  <view class='buy-message'>
+    <textarea placeholder='选填：买家留言（50字以内）'>{{item.message}}</textarea>
+  </view>
+</view>
+
+<!--商品总价，合计  -->
+<view class='total'>
+  <view class='total-price'>
+    <text>商品总价</text>
+    <text class='right'>¥{{orderInfo.totalPrice}}</text>
+  </view>
+  <view class='total-freight'>
+    <text>运费</text>
+    <text class='right'>¥{{orderInfo.freight}}</text>
+  </view>
+</view>
+
+<!--点击付款  -->
+<view class='account'>
+  <text>实付款：{{orderInfo.pay}}</text>
+  <button bindtap='account'>确认购买</button>
+</view>

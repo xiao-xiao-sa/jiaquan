@@ -1,0 +1,49 @@
+/* pages/login/gysLogin/gysLogin.wxss */
+page{
+  background-color:#fff;
+}
+.one{
+  margin:110rpx 0;
+  width: 100%;
+  text-align: center;
+}
+.one>view{
+  width:140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin:0 auto;
+}
+.one .ava{
+  width:140rpx;
+  height: 140rpx;
+}
+.row{
+  width: 658rpx;
+  height: 134rpx;
+  margin:0 auto;
+  border-bottom:1px solid #efefef;
+  position: relative;
+}
+.row input{
+  width:100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom:0;
+}
+.submit-btn{
+  width:700rpx;
+  margin:80rpx auto 20rpx;
+  background-color: #8cc447;
+  color: #fff;
+}
+.bottom{
+  width: 700rpx;
+  margin:0 auto;
+  color: #666;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}

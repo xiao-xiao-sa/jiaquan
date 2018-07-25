@@ -1,0 +1,93 @@
+<!--首页-->
+<view class='ding-search'>
+  <view class='weizhi'>
+     {{myAddress}} 
+    <b></b>
+  </view>
+  <form>
+    <view class="search-input" bindtap="showBtn" type="text">
+      <icon class='search' type='search'></icon>
+      <input placeholder='搜索商品' confirm-type="search" bindtap='toSearch'></input>
+    </view>
+  </form>
+</view>
+<swiper indicator-dots="{{indicatorDots}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='index-swiper'>  
+      <block wx:for="{{backData.imgUrls}}">  
+        <swiper-item>  
+            <image src="{{item.src}}" class="slide-image" width="355" height="150"/>  
+        </swiper-item>  
+      </block>  
+</swiper> 
+<view class="nav-list">
+  <block wx:for="{{backData.navList}}">
+    <view wx:if="{{item.text=='产品中心'}}" bindtap='toClassify' >
+      <image src="{{item.src}}"/>
+      <view>{{item.text}}</view>
+    </view>
+    <navigator wx:else url="{{item.url}}" >
+      <image src="{{item.src}}"/>
+      <view>{{item.text}}</view>
+    </navigator>
+  </block>
+</view>
+<view class="container">
+  <view class='classify-title'>
+    <text>新闻中心</text>
+    <navigator url="../news/news" >更多</navigator>
+  </view>
+  <view>
+    <news wx:for="{{backData.news}}" id='{{item.id}}'
+      src='{{item.src}}'
+      title='{{item.title}}'
+      time='{{item.time}}'
+     bindtap='toNewsDetail' data-id='{{item.id}}'></news>
+  </view>
+  <block wx:for="{{backData.allShopList}}" wx:for-index='cur'>
+    <view class='classify-title'>
+      <text>{{item.shopType}}</text>
+      <view bindtap='toClassify' data-cur='{{cur}}'>更多</view>
+    </view>
+    <view class='shop-list'>
+     <goods wx:for="{{item.shopList}}" wx:for-item="shopList"
+        id='{{shopList.id}}' 
+        title='{{shopList.title}}' 
+        src='{{shopList.src}}' 
+        price='{{shopList.price}}' 
+        sele='{{shopList.sale}}'
+        bindtap='toShopDetail' data-id='{{shopList.id}}'>
+      </goods> 
+    </view>
+  </block> 
+  <navigator class='zhaoshang'>
+    <image src='../../images/zhaoshang.jpg'></image>
+  </navigator>
+  <view class='classify-title'>
+    <text>在线留言</text>
+  </view>
+  <form class='leave-word-model'>
+    <view class='leave-word'>
+      <text>联系人</text>
+      <input bindinput='getName'></input>
+    </view>
+    <view class='leave-word'>
+      <text>联系电话</text>
+      <input bindinput='getPhone'></input>
+    </view>
+    <view class='leave-word'>
+      <text>公司地址</text>
+      <input bindinput='getCompany'></input>
+    </view>
+    <view class='leave-word'>
+      <text>治理/加盟区域</text>
+      <picker mode="region" bindchange="bindRegionChange" value="{{liuyan.region}}" custom-item="{{customItem}}" class='picker-box'>
+        <view class="picker">
+          <text style='opacity:0'>:</text><text wx:for='{{liuyan.region}}'>{{item}}</text>
+        </view>
+      </picker>
+    </view>
+    <button bindtap='submitLiuyan'>提交</button>
+  </form>
+</view>
+
+

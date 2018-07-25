@@ -1,0 +1,16 @@
+<!--用户个人信息-->
+<view class='container'>
+  <view class='row'>
+    <text class='left'>头像</text>
+    <image src='{{userInfo.avatarUrl}}'></image>
+  </view>
+  <view class='row'>
+    <text class='left'>昵称</text>
+    <text class='right'>{{userInfo.nickName}}</text>
+  </view>
+  <view class='row'>
+    <text class='left'>微信号</text>
+    <text class='right'>{{userInfo.wxh}}</text>
+  </view>
+</view>
+

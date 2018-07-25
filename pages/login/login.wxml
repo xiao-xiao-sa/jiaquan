@@ -1,0 +1,12 @@
+<!--登录-->
+<view class='one'>
+  <view><open-data type="userAvatarUrl" class='ava'></open-data></view>
+</view>
+<view class='two'>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo='gysLogin'>供应商登录</button>
+  <view wx:else>请升级微信版本</view>
+</view>
+<view class='two'>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">买家登录</button>
+  <view wx:else>请升级微信版本</view>
+</view>

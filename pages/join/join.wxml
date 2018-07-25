@@ -1,0 +1,9 @@
+<!--招商加盟-->
+<view>
+	<view class='title'>为什么招商？</view>
+	<view class='content'>
+		<view class='h2'>百姓日益增强的环保意识</view>
+		<view class='str'>人们对国内室内环境保护的认识度由2000年的30.8%上升到现在的83.5%，目前，装修签订合同时，要求增加环保条款的消费者多了，买房时要求开发商出示环保检测证明的多了，要求检测室内空气质量的多了，室内环境检查与治理逐步发展为一个新兴的行业。</view>
+		<view class='img'><image src='../../images/join.jpg'/></view>
+	</view>
+</view>

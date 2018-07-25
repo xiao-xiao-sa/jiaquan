@@ -1,0 +1,57 @@
+/* pages/login/forgetPwd/forgetPwd.wxss */
+page{
+  background-color: #fff;
+}
+.title{
+  width: 100%;
+  box-sizing: border-box;
+  padding:0 25rpx;
+  font-size: 40rpx;
+  margin-top:100rpx;
+}
+form{
+  margin-top:100rpx;
+  padding:0 25rpx;
+}
+.phone-input{
+  height: 100rpx;
+  width: 700rpx;
+  margin:0 auto;
+  border-bottom: 1px solid #efefef;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+.phone-input input{
+  height: 100%;
+  margin-left:25rpx;
+}
+.code-input{
+  height: 100rpx;
+  width: 700rpx;
+  margin:0 auto;
+  border-bottom:1px solid #efefef;
+}
+.submit-btn{
+  width:700rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #8cc447;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  margin:100rpx auto;
+}
+.pwd-input{
+  height: 100rpx;
+  width: 700rpx;
+  margin:0 auto;
+  border-bottom: 1px solid #efefef;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+.pwd-input input{
+  height: 100%;
+  margin-left:25rpx;
+}

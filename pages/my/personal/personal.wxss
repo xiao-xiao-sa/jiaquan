@@ -1,0 +1,30 @@
+/* pages/my/personal/personal.wxss */
+.container{
+  width:100%;
+  padding-left:25rpx;
+  box-sizing: border-box;
+  background-color: #fff; 
+  margin-top: 20rpx;
+}
+.row{
+  height: 80rpx;
+  line-height: 80rpx;
+  width:725rpx;
+  box-sizing: border-box;
+  padding-right: 25rpx;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.row image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 5rpx;
+  background-color: #666;
+  position: relative;
+  top:10rpx;
+}
+.row .right{
+  color: #666;
+}

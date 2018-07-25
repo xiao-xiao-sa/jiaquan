@@ -1,0 +1,14 @@
+<!--搜索页面-->
+<view class='search-box'>
+  <view class='search-input'>
+    <icon class='search' type='search'></icon>
+    <input placeholder='搜索商品' bindinput='getSearchInput'></input>
+  </view>
+  <button class='search-btn' bindtap='search'>搜索</button>
+</view>
+<view wx:if='{{hasHistory}}'>
+  <view class='title'>搜索历史</view>
+  <view class='history'>
+    <view wx:for='{{searchList}}' bindtap='search' data-item='{{item}}'>{{item}}</view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--获取验证的组件-->
+<view class='listCode'>
+    <input type='number' bindinput="bindCode"></input>
+    <view class='getCode' bindtap='getCode' wx:if='{{canCode}}'>获取验证码</view>
+    <view class='getCode' wx:else>{{times}}后重获</view> 
+  </view>

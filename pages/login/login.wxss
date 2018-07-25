@@ -1,0 +1,26 @@
+/* pages/login/login.wxss */
+.one{
+  margin:110rpx 0;
+  width: 100%;
+  text-align: center;
+}
+.one>view{
+  width:140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin:0 auto;
+}
+.one .ava{
+  width:140rpx;
+  height: 140rpx;
+}
+.two{
+  margin:40rpx auto 60rpx;
+}
+.two button{
+  background-color:#8cc447;
+  color: #fff;
+  width:300rpx;
+  height: 80rpx;
+}

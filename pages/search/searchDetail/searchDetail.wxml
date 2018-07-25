@@ -1,0 +1,20 @@
+<!--搜索商品所展示的页面-->
+<view class='search-container'>
+  <view class='search-input'>
+    <icon class='search' type='search'></icon>
+    <input placeholder='搜索商品' confirm-type="search" bindtap='toSearch'></input>
+  </view>
+</view>
+<view  wx:if="{{shopList.length>0?true:false}}"   class='shop-container'>
+  <goods wx:for="{{shopList}}" 
+    id='{{item.id}}' 
+    title='{{item.title}}' 
+    src='{{item.src}}' 
+    price='{{item.price}}' 
+    sele='{{item.sale}}'
+    bindtap='toShopDetail' data-id='{{item.id}}'>
+  </goods> 
+</view> 
+<view wx:else class='no-shop'>
+  哦豁！没有找到该商品，换个关键词搜索试试。。
+</view>

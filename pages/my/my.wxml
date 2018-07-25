@@ -1,0 +1,56 @@
+<!--个人中心-->
+<!-- 先判断用户是否授权 -->
+<!-- 如果用户已经授权，则显示个人中心内容 -->
+<view wx:if='{{true}}' class='container'>
+	<view class='header'>
+		<image class='bg' src='../../images/bg.jpg'/>
+		<image class='ava' src='{{userInfo.avatarUrl}}'/>
+		<view class='name'>{{userInfo.nickName}}</view>
+		<view class='phone'>
+			<text wx:if='{{userInfo.phone}}'>{{userInfo.phone}}</text>
+			<navigator url='phone/phone' wx:else>绑定手机号</navigator>
+		</view>
+	</view>
+	<view class='order'>
+		<view class='order-top'>
+			<text>我的订单</text>
+			<view bindtap='toOrderForm' data-cur='0'>全部订单<view class='arrow1'/></view>
+		</view>
+		<view class='order-bottom'>
+			<view bindtap='toOrderForm' data-cur='1'>
+				<image src='../../images/dfk.png'/>
+				<view>待付款</view>
+			</view>
+			<view bindtap='toOrderForm' data-cur='2'>
+				<image src='../../images/dfh.png'/>
+				<view>待发货</view>
+			</view>
+			<view bindtap='toOrderForm' data-cur='3'>
+				<image src='../../images/dsh.png'/>
+				<view>待收货</view>
+			</view>
+			<view bindtap='toOrderForm' data-cur='4'>
+				<image src='../../images/ywc.png'/>
+				<view>已完成</view>
+			</view>
+		</view>
+	</view>
+	<!-- 如果用户类别是经销商（jxs），就会显示这一模块 -->
+  <view class='jxs' >
+    <view url=''>账户余额 <text class='jifen'>{{2000}}积分</text></view>
+    <view bindtap='getJcbg'>检测报告<view class='arrow'/></view>
+    <view bindtap='getYsbg'>验收报告<view class='arrow'/></view>
+  </view>
+  <!-- 个人信息模块都会显示 -->
+  <view class='user-info'>
+    <navigator url='personal/personal'>个人信息<view class='arrow'/></navigator>
+    <navigator url='address/address'>地址管理<view class='arrow'/></navigator>
+    <navigator url='phone/phone'>修改手机号<view class='arrow'/></navigator>
+    <navigator url='password/password'>修改密码<view class='arrow'/></navigator>
+  </view>
+</view>
+<!-- 如果用户未授权，则弹出让用户授权的弹框 -->
+<view wx:else>
+	<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+	<view wx:else>请升级微信版本</view>
+</view>

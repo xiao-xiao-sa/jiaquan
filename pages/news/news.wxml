@@ -1,0 +1,8 @@
+<!--新闻中心-->
+<view>
+    <news wx:for="{{news}}" id='{{item.id}}'
+      src='{{item.src}}'
+      title='{{item.title}}'
+      time='{{item.time}}'
+     bindtap='toNewsDetail' data-id='{{item.id}}'></news>
+</view>

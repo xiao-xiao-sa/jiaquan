@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/orderForm/orderForm",
+    "pages/shoppingCar/shoppingCar",
+    "pages/my/my",
+    "pages/orderForm/orderDetail/orderDetail",
+    "pages/shopDetail/shopDetail",
+    "pages/about/about",
+    "pages/join/join",
+    "pages/news/news",
+    "pages/news/newsDetail/newsDetail",
+    "pages/my/personal/personal",
+    "pages/my/address/address",
+    "pages/my/newAddress/newAddress",
+    "pages/my/phone/phone",
+    "pages/my/password/password",
+    "pages/orderForm/orderAccounts/orderAccounts",
+    "pages/contact/contact",
+    "pages/register/register",
+    "pages/login/gysLogin/gysLogin",
+    "pages/login/forgetPwd/forgetPwd",
+    "pages/search/search",
+    "pages/search/searchDetail/searchDetail",
+    "pages/orderForm/wuliu/wuliu"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8cc447",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#4c4c4c",
+    "selectedColor": "#8cc447",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/homepage_gray.png",
+        "selectedIconPath": "images/homepage_green.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "images/goods_gray.png",
+        "selectedIconPath": "images/goods_green.png"
+      },
+      {
+        "pagePath": "pages/orderForm/orderForm",
+        "text": "订单",
+        "iconPath": "images/order-form_gray.png",
+        "selectedIconPath": "images/order-form_green.png"
+      },
+      {
+        "pagePath": "pages/shoppingCar/shoppingCar",
+        "text": "购物车",
+        "iconPath": "images/trolleys_gray.png",
+        "selectedIconPath": "images/trolleys_green.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/personal_gray.png",
+        "selectedIconPath": "images/personal_green.png"
+      }
+    ]
+  }
+}

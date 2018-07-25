@@ -1,0 +1,5 @@
+<!--联系我们页面-->
+<view class='container'>
+  tel:12345678900
+  <view>期待您的来电</view>
+</view>

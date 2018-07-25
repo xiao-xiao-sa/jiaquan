@@ -1,0 +1,37 @@
+<!--、产品分类-->
+<view class='search-container'>
+  <view class='search-input'>
+    <icon class='search' type='search'></icon>
+    <input placeholder='搜索商品' confirm-type="search" bindtap='toSearch'></input>
+  </view>
+</view>
+<scroll-view scroll-x="true" class="tab-h {{isFixed?'active':''}}" scroll-left="{{scrollLeft}}" >
+  <view class="tab-item {{currentTab==index?'active':''}}" wx:for="{{tags}}" data-current="{{index}}" bindtap="swichNav">{{item}}</view>
+</scroll-view>
+<swiper class='tab-content'  current="{{currentTab}}" style="height: {{winHeight?winHeight+'px':'auto'}}" duration="50" bindchange="switchTab">
+ <!-- style="height: {{winHeight?winHeight+'px':'auto'}}"  -->
+  <swiper-item wx:for="{{tags}}" wx:for-item="tagsItem">
+    <scroll-view scroll-y style="height: {{winHeight?winHeight+'px':'auto'}}">
+      <block wx:if="{{allShopList[tagsItem]?false:true}}">
+        <view class="loading_box">
+          <image class="loading load-img" src="../../images/loading.png"></image>
+        </view>
+      </block>
+      <block wx:else>
+         <view  wx:if="{{allShopList[tagsItem].shopList.length>0?true:false}}" bindscrolltoupper="refresh"  class='shop-container'>
+          <goods wx:for="{{allShopList[tagsItem].shopList}}" wx:for-item="shopList"
+            id='{{shopList.id}}' 
+            title='{{shopList.title}}' 
+            src='{{shopList.src}}' 
+            price='{{shopList.price}}' 
+            sele='{{shopList.sale}}'
+            bindtap='toShopDetail' data-id='{{shopList.id}}'>
+          </goods> 
+        </view> 
+        <view wx:else   class="nodata">
+            <text class="nodata-desc">哦豁，啥子都没得...</text>
+        </view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

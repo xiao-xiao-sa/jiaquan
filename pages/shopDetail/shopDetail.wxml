@@ -1,0 +1,48 @@
+<!--商品详情-->
+<swiper class="swiper" indicator-dots="{{indicatorDots}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:{{imgheights[current]}}rpx;">
+      <block wx:for="{{shopInfo.imgUrls}}">
+        <swiper-item> 
+            <image src="{{item.src}}" class="slide-image" bindload="imageLoad" style="height:{{imgheights[current]}}rpx;width:{{imgwidth}}rpx;"/>  
+        </swiper-item>
+      </block>
+</swiper>
+<view class='shop-info'>
+	<view class='info-01'>
+		<view class='left'>
+			<view class='title'>{{shopInfo.title}}</view>
+			<view class='price'>¥<text style='font-size: 40rpx'>{{shopInfo.price}}</text></view>
+		</view>
+		<button class='right' open-type="share">
+			<image src='../../images/fenxiang.png'/>
+		</button>
+	</view>
+	<view class='info-02'>
+		<text>运费：{{shopInfo.freight}}</text>
+		<text>销量：{{shopInfo.allSale}}</text>
+		<text>剩余：{{shopInfo.surplus}}</text>
+	</view>
+	<view class='info-03'>
+		<text class='kuang'>满减</text>
+		<text class='kuang'>包邮</text>
+		<text wx:if='{{shopInfo.freeFreight}}'>满{{shopInfo.freeFreight}}元，包邮</text>
+	</view>
+</view>	
+<view class='shop-detail'>
+	<view class='detail-title'>商品详情</view>
+	<view class='detail-img'>
+		<image src='{{shopInfo.shopDetailImg}}' style="width:750rpx;height:{{shopDetailImgH}}rpx" bindload="getImgH"/>
+	</view>
+</view>
+<view class='footer'>
+	 <button class='kf' open-type='contact' send-message-title="{{shopInfo.title}}"  show-message-card="true" send-message-path="/pages/shopDetail/shopDetail?id={{shopInfo.id}}"> 
+    <image src='../../images/kf.png'/>
+		<view>客服</view>
+	 </button> 
+	<button bindtap='toShoppingCar' class='car'>
+		<image src='../../images/trolleys_gray.png'/>
+		<view>购物车</view>
+	</button>
+	<view class='add-car' bindtap='addShoppingCar' data-id='{{shopInfo.id}}'>加入购物车</view>
+	<view class='buy' bindtap='toOrderAccounts' data-id='{{shopInfo.id}}'>立即购买</view>
+</view>

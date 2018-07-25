@@ -1,0 +1,18 @@
+<!--供应商登录-->
+<!--登录-->
+<view class='one'>
+  <view><open-data type="userAvatarUrl" class='ava'></open-data></view>
+</view>
+<form>
+  <view class='row'>
+    <input placeholder='请输入账号' name='uPhone' bindinput='uPhoneInput'></input>
+  </view>
+  <view class='row'>
+    <input password placeholder='请输入密码' name='uPwd' bindinput='uPwdInput'></input>
+  </view>
+  <button class='submit-btn' bindtap='submitLogin'>登录</button>
+  <view class='bottom'>
+    <navigator url='../../register/register'>免费注册</navigator>
+    <navigator url='../forgetPwd/forgetPwd'>忘记密码</navigator>
+  </view>
+</form>

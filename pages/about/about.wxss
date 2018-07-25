@@ -1,0 +1,44 @@
+/* pages/about/about.wxss */
+.title{
+	width: 100%;
+	text-align: left;
+	padding:36rpx 25rpx 50rpx;
+	box-sizing: border-box;
+}
+.h1{
+	color:#000;
+	font-size: 40rpx;
+}
+.h3{
+	color:#666;
+	font-size: 24rpx;
+}
+.h3 text{
+	display: inline-block;
+	margin-right: 20rpx;
+}
+.green{
+	color:#8cc447;
+}
+.content{
+	width: 100%;
+	box-sizing: border-box;
+	padding:0 25rpx;
+	margin-bottom:80rpx;
+	line-height:50rpx;  
+}
+.content image{
+	margin:50rpx auto;
+	width:700rpx;
+	height: 450rpx;
+}
+.img{
+	width:100%;
+	padding:0;
+	text-align: center;
+	box-sizing: border-box;
+}
+.str{
+	text-indent:2em;
+	text-align: justify;
+}
